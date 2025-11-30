@@ -14,7 +14,7 @@ interface WeatherForecast {
   templateUrl: './weather.component.html',
   standalone: true,
   imports: [CommonModule],
-  styleUrls: ['./weather.component.css']
+  styleUrls: ['./weather.component.scss']
 })
 export class WeatherComponent implements OnInit {
   forecasts: WeatherForecast[] = [];
