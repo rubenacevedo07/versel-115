@@ -1,0 +1,11 @@
+<!-- login.component.html -->
+<h2>Login</h2>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <label>Email</label>
+    <input formControlName="email" type="email" />
+
+    <label>Password</label>
+    <input formControlName="password" type="password" />
+
+    <button type="submit" [disabled]="loginForm.invalid">Ingresar</button>
+</form>
