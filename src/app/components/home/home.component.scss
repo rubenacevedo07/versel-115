@@ -1,0 +1,224 @@
+// Import your backbone to access variables/mixins
+@use '../../../styles/abstracts/_variables' as *;
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
+// --- 1. UTILITY & LAYOUT ---
+.section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.min-vh-80 {
+    min-height: 80vh;
+}
+
+// --- 2. TYPOGRAPHY & GRADIENTS ---
+.text-gradient {
+    background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+// --- 3. PREMIUM BUTTONS ---
+.btn-premium-primary {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 50rem; // Pill shape
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0 10px 20px -5px rgba($primary-color, 0.4);
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px -5px rgba($primary-color, 0.6);
+        background-color: lighten($primary-color, 5%);
+    }
+}
+
+.btn-premium-outline {
+    background: transparent;
+    color: $text-dark;
+    padding: 0.8rem 2rem;
+    border-radius: 50rem;
+    border: 2px solid #e2e8f0;
+    font-weight: 600;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: $primary-color;
+        color: $primary-color;
+        background: rgba($primary-color, 0.05);
+    }
+}
+
+// --- 4. HERO SECTION STYLING ---
+.hero-section {
+    background-color: #f8fafc; // Very subtle slate background
+
+    // The "Blob" Background Effect
+    .blob {
+        position: absolute;
+        filter: blur(80px);
+        opacity: 0.6;
+        z-index: 0;
+    }
+
+    .blob-1 {
+        top: -10%;
+        left: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba($secondary-color, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
+    }
+
+    .blob-2 {
+        bottom: 10%;
+        right: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba($primary-color, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+    }
+
+    // Badge Pill
+    .badge-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 16px;
+        background: rgba($primary-color, 0.08);
+        color: $primary-color;
+        border-radius: 100px;
+        font-weight: 600;
+        font-size: 0.9rem;
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: $primary-color;
+            border-radius: 50%;
+        }
+    }
+}
+
+// --- 5. IMAGE & GLASSMORPHISM ---
+.hero-image-wrapper {
+    position: relative;
+
+    .main-img {
+        // Subtle rotation creates a dynamic, magazine-like feel
+        transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+        transition: transform 0.5s ease-out;
+
+        &:hover {
+            transform: perspective(1000px) rotateY(0) rotateX(0);
+        }
+    }
+
+    // The Glass Card
+    .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px); // The "Frosted Glass" effect
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        min-width: 200px;
+        animation: float 4s ease-in-out infinite;
+
+        .icon-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+// --- 6. FEATURE CARDS ---
+.feature-card {
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: default;
+
+    .icon-box {
+        width: 60px;
+        height: 60px;
+        background: rgba($primary-color, 0.05);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s ease;
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+
+        .icon-box {
+            background: $primary-color;
+            color: white !important; // Force text color change
+
+            i {
+                color: white;
+            }
+        }
+    }
+}
+
+// --- 7. ANIMATIONS (Keyframes) ---
+@keyframes float {
+    0% {
+        transform: translate(-50%, -50%) translateY(0px);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) translateY(-15px);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) translateY(0px);
+    }
+}
+
+// Utility animation classes
+.fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+.delay-4 {
+    animation-delay: 0.4s;
+}
+
+.delay-5 {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

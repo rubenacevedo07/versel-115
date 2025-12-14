@@ -1,0 +1,25 @@
+// Import variables if you want to use specific colors
+@use '../../../styles/abstracts/_variables' as *;
+
+.site-footer {
+    // Ensure it sits on top of the page background
+    position: relative;
+    z-index: 10;
+
+    // Specific styling for the text
+    .small {
+        font-size: 0.875rem;
+        color: #64748b; // Muted slate
+    }
+
+    // Handle the payment image gracefully
+    .payment-icons {
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+        max-width: 150px; // Prevent it from being too big on mobile
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

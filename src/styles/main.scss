@@ -1,0 +1,14 @@
+// src/styles/main.scss
+
+// 1. Load the Bootstrap System
+// We use @use to load the file as a module. 
+@use 'vendors/bootstrap-config';
+
+// 2. Load Custom Components
+@use 'components/cards';
+
+// 3. Global Styles
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+}

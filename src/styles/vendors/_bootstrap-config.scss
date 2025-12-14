@@ -1,0 +1,37 @@
+// src/styles/vendors/_bootstrap-config.scss
+
+// 1. Include functions first
+@import "bootstrap/scss/functions";
+
+// 2. Include your custom variables (Your overrides)
+@import "../abstracts/variables";
+
+// 3. Include the rest of Bootstrap's variables
+@import "bootstrap/scss/variables";
+
+// 4. CRITICAL FIX: Include Maps (This defines $theme-colors-rgb)
+@import "bootstrap/scss/maps";
+
+// 5. Include mixins
+@import "bootstrap/scss/mixins";
+
+// 6. Include the rest of Bootstrap
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+// ... rest of your imports (containers, grid, buttons, etc.)
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/modal";
+@import "bootstrap/scss/utilities";
+
+// 7. Import Utilities API
+@import "bootstrap/scss/utilities/api";

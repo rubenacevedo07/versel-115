@@ -1,0 +1,52 @@
+// src/styles/components/_cards.scss
+
+// 1. IMPORT YOUR VARIABLES
+// "as *" allows you to use $box-shadow-lg directly (instead of variables.$box-shadow-lg)
+@use '../abstracts/variables' as *;
+
+// ... rest of the code
+.tutor-card {
+    // We cannot use @extend .card easily with modules, so we apply styles directly
+    // or use the class="card tutor-card" in HTML.
+    // For now, let's keep it simple:
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: $border-radius; // Uses variable
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+
+    // The Image area
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    // Hover effect
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $box-shadow-lg; // <--- NOW THIS WILL WORK
+        border-color: transparent;
+    }
+
+    // Badge
+    .badge-overlay {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(255, 255, 255, 0.9);
+        color: $text-dark;
+        font-weight: 600;
+        backdrop-filter: blur(4px);
+        padding: 0.25rem 0.75rem;
+        border-radius: 50rem;
+        font-size: 0.75rem;
+    }
+}

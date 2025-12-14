@@ -1,0 +1,73 @@
+@use '../../../styles/abstracts/variables' as *;
+
+.auth-section {
+    background-color: #f8fafc; // Light background
+
+    // --- Background Blobs (Reused for consistency) ---
+    .blob {
+        position: absolute;
+        filter: blur(80px);
+        opacity: 0.5;
+        z-index: 0;
+    }
+
+    .blob-1 {
+        top: -10%;
+        left: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba($brand-blue-pale, 0.5) 0%, transparent 70%);
+    }
+
+    .blob-2 {
+        bottom: -10%;
+        right: -10%;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle, rgba($brand-lime, 0.4) 0%, transparent 70%);
+    }
+}
+
+.auth-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px); // Glass effect
+    box-shadow: $box-shadow-lg; // Uses your new Blue-tinted shadow
+    border-radius: $border-radius-lg;
+}
+
+// Custom Input Styling
+.form-floating {
+    .form-control {
+        border: 1px solid #e2e8f0;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 12px;
+
+        &:focus {
+            border-color: $brand-blue; // Your Main Blue
+            box-shadow: 0 0 0 4px rgba($brand-blue, 0.1); // Subtle blue glow
+        }
+    }
+
+    label {
+        color: $text-muted;
+    }
+}
+
+// Button Hover Logic
+.btn-primary {
+    transition: all 0.3s ease;
+    background-color: $brand-blue;
+    border-color: $brand-blue;
+
+    &:hover {
+        background-color: darken($brand-blue, 5%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba($brand-blue, 0.3);
+    }
+
+    &:disabled {
+        background-color: $brand-blue-pale;
+        border-color: transparent;
+        transform: none;
+    }
+}

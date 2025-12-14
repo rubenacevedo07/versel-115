@@ -1,0 +1,68 @@
+// src/styles/abstracts/_variables.scss
+
+// =========================================
+// 1. BRAND PALETTE (Your Specific Colors)
+// =========================================
+$brand-blue: #4969af; // Main Title / Primary
+$brand-lime: #ceeb7d; // Logo / Accents
+$brand-blue-pale: #c3cde4;
+$brand-blue-muted: #7c93c5;
+
+// Functional Colors (kept from previous premium setup)
+$success-color: #3bb3bd; // Mint
+$warning-color: #ffbc00; // Warm Yellow
+$danger-color: #dc3545;
+
+// Text & Backgrounds
+$surface-color: #ffffff;
+$text-dark: #2c3e50; // Rich Blue-Grey (Premium feel)
+$text-muted: #64748b; // Slate
+
+// =========================================
+// 2. SEMANTIC ASSIGNMENTS
+// =========================================
+$primary-color: $brand-blue;
+$secondary-color: $brand-lime;
+
+// =========================================
+// 3. BOOTSTRAP OVERRIDES
+// =========================================
+// This maps our variables to Bootstrap's internal system
+$primary: $primary-color;
+$secondary: $secondary-color;
+$success: $success-color;
+$warning: $warning-color;
+
+$body-color: $text-dark;
+$headings-color: $brand-blue; // Forces H1-H6 to use your Blue
+
+// Typography
+$font-family-sans-serif: 'Inter', 'Segoe UI', Roboto, sans-serif;
+$font-family-display: 'Clash Display', 'Inter', sans-serif;
+$font-family-base: $font-family-sans-serif;
+
+// =========================================
+// 4. UI SHAPING (Shadows & Radius)
+// =========================================
+$enable-rounded: true;
+
+// Rounded Corners
+$border-radius: 0.75rem; // 12px
+$border-radius-lg: 1rem; // 16px
+$border-radius-sm: 0.5rem; // 8px
+
+// Shadows (Tinted with your Brand Blue for depth)
+$box-shadow: 0 4px 12px rgba(73, 105, 175, 0.15);
+$box-shadow-sm: 0 2px 4px rgba(73, 105, 175, 0.1);
+$box-shadow-lg: 0 12px 24px rgba(73, 105, 175, 0.2);
+
+$spacer: 1rem;
+
+// =========================================
+// 5. ANIMATIONS
+// =========================================
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+
+$surface-color: #ffffff;
+$text-dark: #2c3e50; // <--- Make sure this line exists!
+$text-muted: #64748b;

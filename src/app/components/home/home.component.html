@@ -1,0 +1,83 @@
+<!-- HERO SECTION -->
+<header class="hero-section position-relative overflow-hidden">
+    <!-- Background decoration blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="container-xxl position-relative z-2">
+        <div class="row align-items-center min-vh-80 py-5">
+
+            <!-- Text Content -->
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="badge-pill mb-4 fade-in-up delay-1">
+                    <span class="dot"></span> #1 Language Platform
+                </div>
+
+                <h1 class="display-3 fw-bold mb-4 text-dark fade-in-up delay-2">
+                    Fluent in <br>
+                    <span class="text-gradient">3 months.</span>
+                    <br> Guaranteed.
+                </h1>
+
+                <p class="lead text-muted mb-5 pe-lg-5 fade-in-up delay-3">
+                    Join over 10 million learners. Master a new language with native speakers through immersive video
+                    lessons.
+                </p>
+
+                <div class="d-flex gap-3 fade-in-up delay-4">
+                    <button class="btn btn-premium-primary btn-lg">Get Started</button>
+                    <button class="btn btn-premium-outline btn-lg">View Tutors</button>
+                </div>
+
+                <!-- Trust Strip (embedded in Hero) -->
+                <div class="mt-5 pt-4 d-flex gap-5 border-top border-light fade-in-up delay-5">
+                    <div *ngFor="let stat of stats">
+                        <h4 class="fw-bold mb-0 text-dark">{{ stat.value }}</h4>
+                        <small class="text-muted">{{ stat.label }}</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image / Visual -->
+            <div class="col-lg-6 position-relative">
+                <div class="hero-image-wrapper fade-in-right delay-3">
+                    <!-- Main Image -->
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop"
+                        alt="Student Learning" class="img-fluid rounded-4 shadow-xl main-img">
+
+                    <!-- Floating "Glass" Card -->
+                    <div
+                        class="glass-card position-absolute top-50 start-0 translate-middle-y shadow-lg p-3 rounded-4 d-flex align-items-center gap-3">
+                        <div class="icon-circle bg-success text-white">
+                            <i class="bi bi-check-lg"></i>
+                        </div>
+                        <div>
+                            <p class="mb-0 fw-bold small">Lesson Completed</p>
+                            <p class="mb-0 text-muted extra-small">Just now</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<!-- FEATURES GRID -->
+<section class="section-padding bg-light-subtle">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4" *ngFor="let feature of features">
+                <div class="feature-card p-5 h-100 bg-white rounded-4 border-0">
+                    <div class="icon-box mb-4 text-primary">
+                        <i class="bi {{feature.icon}} fs-2"></i>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">{{ feature.title }}</h3>
+                    <p class="text-muted mb-0">{{ feature.desc }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-impact-section></app-impact-section>

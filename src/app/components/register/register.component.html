@@ -1,0 +1,62 @@
+<section
+    class="auth-section d-flex align-items-center justify-content-center min-vh-100 position-relative overflow-hidden">
+
+    <!-- Background Decor -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="container position-relative z-2">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5 col-xl-4">
+
+                <div class="card auth-card border-0">
+                    <div class="card-body p-5">
+
+                        <div class="text-center mb-4">
+                            <h2 class="fw-bold text-primary mb-2">Create Account</h2>
+                            <p class="text-muted small">Join us and start learning today.</p>
+                        </div>
+
+                        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+                            <!-- Full Name -->
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="nameInput" placeholder="John Doe"
+                                    formControlName="fullName">
+                                <label for="nameInput">Nombre completo</label>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="emailInput" placeholder="name@example.com"
+                                    formControlName="email">
+                                <label for="emailInput">Email</label>
+                            </div>
+
+                            <!-- Password -->
+                            <div class="form-floating mb-4">
+                                <input type="password" class="form-control" id="passwordInput" placeholder="Password"
+                                    formControlName="password">
+                                <label for="passwordInput">Password</label>
+                            </div>
+
+                            <!-- Submit -->
+                            <button type="submit" class="btn btn-primary w-100 py-3 rounded-pill fw-bold shadow-sm"
+                                [disabled]="registerForm.invalid">
+                                Registrar
+                            </button>
+
+                        </form>
+
+                        <div class="text-center mt-4">
+                            <span class="text-muted small">Already have an account? </span>
+                            <a routerLink="/login" class="text-primary fw-bold text-decoration-none">Log in</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
