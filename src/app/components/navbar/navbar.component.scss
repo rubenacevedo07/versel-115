@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+@use '../../../styles/abstracts/variables' as *;
+
+.custom-navbar {
+    background-color: $brand-blue !important;
+    padding: 0.8rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-logo {
+    width: 150px;
+    height: auto;
+    // If your logo is dark, you might need: filter: brightness(0) invert(1);
+    // But if it's the green logo, it will pop beautifully on blue.
+}
+
+.nav-link {
+    color: $text-soft-white !important;
+    font-weight: 500;
+    padding: 0.6rem 1.2rem !important;
+    border-radius: 50px;
+    transition: all 0.25s ease;
+
+    &:hover {
+        color: $text-white !important;
+        background: rgba(255, 255, 255, 0.1); // Soft glow
+    }
+}
+
+.active-link {
+    color: #000 !important; // Dark text for high contrast on green
+    background-color: $brand-green !important; // Green pill for active state
+    font-weight: 700;
+}
+
+/* Login Link */
+.btn-login {
+    color: $text-white !important;
+    font-weight: 600;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+/* Register Button (CTA) */
+.btn-register {
+    background-color: $brand-green !important;
+    border: none;
+    color: #1a2a4e !important; // Deep navy text for legibility
+    font-weight: 700;
+    padding: 0.6rem 1.5rem;
+    box-shadow: 0 4px 15px rgba(208, 225, 136, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(208, 225, 136, 0.4);
+        background-color: $brand-green !important;
+    }
+}
+
+/* Mobile Toggler White */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+
+    .navbar-toggler-icon {
+        filter: invert(1); // Makes the hamburger icon white
+    }
+}

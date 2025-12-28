@@ -1,0 +1,171 @@
+// --- VARIABLES DE PALETA ---
+$brand-blue: #4969af;
+$brand-lime: #ceeb7d;
+$brand-green: #d0e188;
+$blue-pale: #d4d7ec;
+$white-10: rgba(255, 255, 255, 0.1);
+
+.hero-section {
+    background-color: $brand-blue;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Plus Jakarta Sans', sans-serif; // Sugerencia de tipografía Sans moderna
+
+    // --- EFECTOS DE LUCES (AURA) ---
+    .aura {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        filter: blur(120px);
+        z-index: 1;
+        opacity: 0.4;
+    }
+
+    .aura-1 {
+        top: -150px;
+        right: -100px;
+        background: $brand-lime;
+    }
+
+    .aura-2 {
+        bottom: -100px;
+        left: -100px;
+        background: #6e82c0;
+    }
+
+    // --- TYPOGRAPHY ---
+    .text-highlight {
+        color: $brand-lime;
+        text-shadow: 0 0 20px rgba($brand-lime, 0.3);
+    }
+
+    .color-lime {
+        color: $brand-lime;
+    }
+
+    // --- BADGE ---
+    .badge-premium {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 20px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 100px;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: $brand-lime;
+            border-radius: 50%;
+            box-shadow: 0 0 10px $brand-lime;
+        }
+    }
+
+    // --- BUTTONS ---
+    .btn-action-lime {
+        background-color: $brand-lime;
+        color: #1a2a4e;
+        border: none;
+        border-radius: 16px;
+        font-weight: 700;
+        transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+        &:hover {
+            transform: scale(1.05) translateY(-3px);
+            box-shadow: 0 15px 30px rgba($brand-lime, 0.4);
+            background-color: $brand-green;
+        }
+    }
+
+    .btn-outline-white {
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        border-radius: 16px;
+        font-weight: 500;
+        backdrop-filter: blur(5px);
+
+        &:hover {
+            background: white;
+            color: $brand-blue;
+            border-color: white;
+        }
+    }
+}
+
+// --- IMAGE & VISUALS ---
+.hero-image-container {
+    position: relative;
+    padding: 20px;
+
+    .main-hero-img {
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.5);
+    }
+
+    .image-border-decorator {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 80%;
+        border: 2px solid $brand-lime;
+        border-radius: 40px;
+        z-index: 1;
+        transform: translate(15px, -15px);
+    }
+
+    .glass-status-card {
+        position: absolute;
+        bottom: 10%;
+        left: -40px;
+        z-index: 3;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(20px);
+        border: 1px solid white;
+        min-width: 240px;
+        animation: float 5s ease-in-out infinite;
+
+        .icon-glow-circle {
+            width: 45px;
+            height: 45px;
+            background: $brand-blue;
+            color: $brand-lime;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+// --- ANIMACIONES ---
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.border-white-10 {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.tracking-wider {
+    letter-spacing: 0.1em;
+}
+
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}

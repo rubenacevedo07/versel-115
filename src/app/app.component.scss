@@ -1,51 +1,6 @@
-// src/app/app.component.scss
-.navbar-logo {
-    width: 160px; // <--- Your desired width
-    height: auto; // <--- IMPORTANT: Keeps the logo proportion correct
-    display: block; // Prevents unwanted gaps below the image
-
-    transition: transform 0.3s ease;
-
-    &:hover {
-        transform: scale(1.05); // Slight zoom effect
-    }
-}
-
-// Optional: On mobile phones, 160px might be too big. 
-// Let's make it slightly smaller for screens under 768px.
-@media (max-width: 768px) {
-    .navbar-logo {
-        width: 120px;
-    }
-}
-
-.custom-navbar {
-    background: rgba(255, 255, 255, 0.85); // 85% opacity
-    backdrop-filter: blur(12px); // The "Frosted Glass" effect
-    -webkit-backdrop-filter: blur(12px); // Safari support
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-.nav-link {
-    color: #64748b; // Muted slate color
-    transition: color 0.2s;
-
-    &:hover {
-        color: var(--bs-primary); // Turns blue on hover
-    }
-}
-
-.active-link {
-    color: var(--bs-primary) !important;
-    font-weight: 700;
-}
-
 // Push content down so the fixed navbar doesn't hide the hero section
 .content-wrapper {
-    padding-top: 20px;
+    /*padding-top: 20px;*/
 }
 
 // Remove the blue outline on the login text button

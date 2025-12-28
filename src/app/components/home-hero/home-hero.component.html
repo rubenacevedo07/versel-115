@@ -1,0 +1,68 @@
+<header class="hero-section position-relative overflow-hidden">
+    <div class="aura aura-1"></div>
+    <div class="aura aura-2"></div>
+
+    <div class="container-xxl position-relative z-2">
+        <div class="row align-items-center min-vh-100 py-5">
+
+            <!-- Contenido de Texto -->
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="badge-premium mb-4 fade-in-up delay-1">
+                    <span class="dot"></span>
+                    <span class="text-white fw-light">#1 Language Platform in Latam</span>
+                </div>
+
+                <!-- Forzamos text-white en todo el h1 -->
+                <h1 class="display-2 fw-light mb-4 text-white fade-in-up delay-2">
+                    Fluent in <br>
+                    <span class="text-highlight fw-bold">3 months.</span>
+                    <br>
+                    <span class="fs-2 opacity-75">Guaranteed.</span>
+                </h1>
+
+                <!-- Cambiado text-muted por text-white con opacidad -->
+                <p class="lead mb-5 pe-lg-5 text-white opacity-75 fw-light fade-in-up delay-3">
+                    Join over 10 million learners. Master a new language with native speakers through immersive video
+                    lessons.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3 fade-in-up delay-4">
+                    <button class="btn btn-action-lime btn-lg px-5 py-3">Get Started</button>
+                    <button class="btn btn-outline-white btn-lg px-5 py-3">View Tutors</button>
+                </div>
+
+                <!-- Trust Strip -->
+                <div class="mt-5 pt-5 d-flex gap-5 border-top border-white-10 fade-in-up delay-5">
+                    <div *ngFor="let stat of stats">
+                        <h3 class="fw-bold mb-0 color-lime">{{ stat.value }}</h3>
+                        <small class="text-uppercase tracking-wider text-white opacity-50 fw-light">{{ stat.label
+                            }}</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual / Imagen -->
+            <div class="col-lg-6 position-relative">
+                <div class="hero-image-container fade-in-right delay-3">
+                    <!-- El borde ahora abraza a la imagen correctamente -->
+                    <div class="image-border-decorator"></div>
+
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop"
+                        alt="Talkio Student" class="img-fluid rounded-5 shadow-2xl main-hero-img">
+
+                    <!-- Floating Glass Card -->
+                    <div class="glass-status-card shadow-lg p-3 rounded-4 d-flex align-items-center gap-3">
+                        <div class="icon-glow-circle">
+                            <i class="bi bi-check-lg"></i>
+                        </div>
+                        <div>
+                            <p class="mb-0 fw-bold text-dark small">Lesson Completed</p>
+                            <p class="mb-0 text-muted extra-small">Spanish B2 - 10:00 AM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>

@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ImpactSectionComponent } from '../impact-section/impact-section.component';
+import { CalendlyWidgetComponent } from "../calendly-widget/calendly-widget.component";
+import { HomeHeroComponent } from "../home-hero/home-hero.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ImpactSectionComponent],
+  imports: [CommonModule, ImpactSectionComponent, CalendlyWidgetComponent, HomeHeroComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
