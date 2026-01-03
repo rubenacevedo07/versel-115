@@ -70,3 +70,29 @@
         filter: invert(1); // Makes the hamburger icon white
     }
 }
+
+.btn-lang {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.bg-blue-deep {
+    background-color: #3a548d !important; // Un tono más oscuro que el brand-blue para contraste
+}
+
+.dropdown-item {
+    cursor: pointer;
+    font-size: 0.9rem;
+
+    &:hover {
+        background-color: #d0e188; // Tu color lima
+        color: #1a2a4e;
+    }
+}

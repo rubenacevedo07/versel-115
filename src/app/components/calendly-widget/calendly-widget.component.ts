@@ -1,5 +1,7 @@
 
-import { Component, ElementRef, Input, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+
+declare var Calendly: any;
 
 @Component({
   selector: 'app-calendly-widget',
@@ -9,6 +11,9 @@ import { Component, ElementRef, Input, OnInit, ViewChild, AfterViewInit } from '
   styleUrl: './calendly-widget.component.scss'
 })
 
-export class CalendlyWidgetComponent {
+export class CalendlyWidgetComponent implements AfterViewInit {
+  ngAfterViewInit() {
+    Calendly.initInlineWidgets();
 
+  }
 }

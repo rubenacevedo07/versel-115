@@ -1,6 +1,5 @@
 <nav class="navbar navbar-expand-lg fixed-top custom-navbar navbar-dark">
     <div class="container">
-
         <!-- Logo -->
         <a class="navbar-brand d-flex align-items-center" routerLink="/">
             <img src="../../assets/logo.png" alt="Talkio" class="navbar-logo">
@@ -12,26 +11,37 @@
         </button>
 
         <div class="collapse navbar-collapse" id="mainNav">
-
-            <!-- Centered Links -->
+            <!-- 1. Enlaces Centrados -->
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/teachers" routerLinkActive="active-link">Find Teachers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/courses" routerLinkActive="active-link">Courses</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/corporate" routerLinkActive="active-link">Corporate</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" routerLink="/teachers" routerLinkActive="active-link">Find
+                        Teachers</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/courses"
+                        routerLinkActive="active-link">Courses</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/corporate"
+                        routerLinkActive="active-link">Corporate</a></li>
             </ul>
 
-            <!-- Right Side Buttons -->
-            <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
-                <a routerLink="/login" class="btn btn-link text-decoration-none btn-login">
+            <!-- 2. Lado Derecho: Idioma + Acceso -->
+            <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+
+                <!-- SELECTOR DE IDIOMA (Aquí es donde va) -->
+                <div class="dropdown">
+                    <button class="btn btn-lang dropdown-toggle text-white border-0 d-flex align-items-center gap-2"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-globe2"></i>
+                        <span class="text-uppercase fw-bold small">{{ currentLang }}</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 bg-dropdown-premium">
+                        <li><a class="dropdown-item py-2" (click)="switchLanguage('es')">Español</a></li>
+                        <li><a class="dropdown-item py-2" (click)="switchLanguage('en')">English</a></li>
+                    </ul>
+                </div>
+
+                <!-- Botones existentes -->
+                <a routerLink="/login" class="btn btn-link text-decoration-none btn-login p-0">
                     Log in
                 </a>
-                <a routerLink="/register" class="btn btn-register rounded-pill">
+                <a routerLink="/register" class="btn btn-register rounded-pill px-4">
                     Register Free
                 </a>
             </div>

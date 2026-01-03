@@ -1,0 +1,13 @@
+{
+    "NAV": {
+        "TEACHERS": "Find Teachers",
+        "COURSES": "Courses",
+        "LOGIN": "Log In",
+        "REGISTER": "Register Free"
+    },
+    "HERO": {
+        "TITLE": "Fluent in",
+        "MONTHS": "3 months.",
+        "GUARANTEED": "Guaranteed."
+    }
+}

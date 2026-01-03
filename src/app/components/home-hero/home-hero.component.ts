@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home-hero',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './home-hero.component.html',
   styleUrl: './home-hero.component.scss'
 })
@@ -17,5 +18,5 @@ export class HomeHeroComponent {
     { value: '98%', label: 'Success Rate' }
   ];
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 }

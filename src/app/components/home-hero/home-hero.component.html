@@ -7,21 +7,20 @@
 
             <!-- Contenido de Texto -->
             <div class="col-lg-6 mb-5 mb-lg-0">
-                <div class="badge-premium mb-4 fade-in-up delay-1">
+                <!--<div class="badge-premium mb-4 fade-in-up delay-1">
                     <span class="dot"></span>
                     <span class="text-white fw-light">#1 Language Platform in Latam</span>
-                </div>
+                </div>-->
 
-                <!-- Forzamos text-white en todo el h1 -->
                 <h1 class="display-2 fw-light mb-4 text-white fade-in-up delay-2">
-                    Fluent in <br>
-                    <span class="text-highlight fw-bold">3 months.</span>
+                    {{ 'HERO.TITLE' | translate }} <br>
+                    <span class="text-highlight fw-bold">{{ 'HERO.MONTHS' | translate }}</span>
                     <br>
-                    <span class="fs-2 opacity-75">Guaranteed.</span>
+                    <span class="fs-2 opacity-75">{{ 'HERO.GUARANTEED' | translate }}</span>
                 </h1>
 
                 <!-- Cambiado text-muted por text-white con opacidad -->
-                <p class="lead mb-5 pe-lg-5 text-white opacity-75 fw-light fade-in-up delay-3">
+                <p class="lead mb-5 pe-lg-5 text-white opacity-25 fw-light fade-in-up delay-3">
                     Join over 10 million learners. Master a new language with native speakers through immersive video
                     lessons.
                 </p>

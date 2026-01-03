@@ -1,0 +1,13 @@
+{
+    "NAV": {
+        "TEACHERS": "Buscar Profesores",
+        "COURSES": "Cursos",
+        "LOGIN": "Iniciar Sesión",
+        "REGISTER": "Registrate Gratis"
+    },
+    "HERO": {
+        "TITLE": "Habla fluido en",
+        "MONTHS": "3 meses.",
+        "GUARANTEED": "Garantizado."
+    }
+}
